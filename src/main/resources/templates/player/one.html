@@ -7,21 +7,19 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 <body>
-<h1>Liste des joueurs</h1>
+<h1></h1>
 
 <div id="main">
-    <div th:each="player :${players}" class="card" style="width: 18rem;">
-        <img src="https://www.pngmart.com/files/21/Account-Avatar-Profile-PNG-Photo.png" class="img5">
-        <div class="card-body text-center">
-            <h5 th:text="${player.getName()}" class="card-title"></h5>
+    <div >
+        <div>
+            <h5 th:text="${player.getName()}"></h5>
             <span>Numero : </span><p th:text="${player.getNumber()}"></p>
             <span>Age : </span><p th:text=" ${player.getAge()}"></p>
-            <a th:href="@{/player/one/{id}(id = ${player.getId()})}" class="btn btn-primary">Plus d'info</a>
         </div>
     </div>
 </div>
 <div class="linkCenter">
-    <a href=".." class="btn btn-outline-secondary" id="button-addon1">Retour</a>
+    <a href="../all" class="btn btn-outline-secondary" id="button-addon1">Retour</a>
 </div>
 
 

@@ -33,8 +33,12 @@ public class PlayerService implements Iservice<Player,PlayerDTO,Long> {
 
     @Override
     public PlayerDTO getById(Long id) {
-        Optional<Player> optional = this.playerRepository.findById(id);
-        return optional.map(mapper::toPlayerDto).orElse(null); //optional.isPresent() ?mapper.toPlayerDto(optional.get()) : null;
+//        Optional<Player> optional = this.playerRepository.findById(id);
+//        PlayerDTO playerDTO = optional.isPresent() ? mapper.toPlayerDto(optional.get()) : null;
+        return this.playerRepository
+                .findById(id)
+                .map(mapper::toPlayerDto)
+                .orElse(null);
     }
 
     @Override
