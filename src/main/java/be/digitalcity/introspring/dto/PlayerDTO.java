@@ -1,37 +1,23 @@
-package be.digitalcity.introspring.entities;
+package be.digitalcity.introspring.dto;
 
 import be.digitalcity.introspring.utils.Poste;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
-import org.springframework.stereotype.Controller;
 
 import javax.persistence.*;
 import java.time.LocalDate;
 
-@Entity
 @Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Player {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+public class PlayerDTO {
     Long id;
-
-    @Column()
     String name;
-
-    @Column(columnDefinition = "DATE")
     LocalDate birthDate;
-
-    @Column()
+    int age;
     int number;
-
-    @Column()
     double salary;
-
-    @Column
-    @Enumerated(EnumType.STRING)
     Poste poste;
 }

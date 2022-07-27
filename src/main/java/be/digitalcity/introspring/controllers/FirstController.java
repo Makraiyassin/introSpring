@@ -19,7 +19,7 @@ public class FirstController {
     public ModelAndView firstCall(){
         ModelAndView mv = new ModelAndView("first");
 
-        String msg = System.getenv("MESSAGE");
+        String msg = System.getenv("MESSAGE") == null ? "Spring" : System.getenv("MESSAGE");
         mv.addObject("message", msg);
         mv.addObject("infos", infos);
         return mv;
