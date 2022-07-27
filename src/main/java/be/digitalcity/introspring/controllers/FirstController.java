@@ -1,5 +1,6 @@
 package be.digitalcity.introspring.controllers;
 
+import be.digitalcity.introspring.services.PlayerService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -10,14 +11,16 @@ import java.util.List;
 
 @Controller
 public class FirstController {
+
     List<String> infos = Arrays.asList(
             "toto",
             "tutu",
             "tata"
     );
+
     @RequestMapping(path = "/first", method = RequestMethod.GET)
-    public ModelAndView firstCall(){
-        ModelAndView mv = new ModelAndView("first");
+    public ModelAndView getAllPlayers(){
+        ModelAndView mv = new ModelAndView("first.html");
 
         String msg = System.getenv("MESSAGE") == null ? "Spring" : System.getenv("MESSAGE");
         mv.addObject("message", msg);

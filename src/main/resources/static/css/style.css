@@ -1,3 +1,41 @@
-body{
+h1{
+    text-align: center;
     color: gray;
+}
+
+.video-responsive {
+
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+    max-height: 350px;
+}
+
+.video-responsive iframe {
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+#main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#main .card{
+    margin: 10px 0px;
+    transition: 0.4s !important;
+}
+#main .card img{
+    margin: 1% auto;
+    width: 60%;
+}
+
+#main .card:hover{
+    box-shadow: 3px 3px 8px black;
+    width: 19rem !important;
 }

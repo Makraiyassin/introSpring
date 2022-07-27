@@ -19,7 +19,7 @@ public class Player {
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
 
-    @Column()
+    @Column(name = "name")
     String name;
 
     @Column(columnDefinition = "DATE")
