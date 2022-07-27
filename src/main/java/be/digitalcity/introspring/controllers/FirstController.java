@@ -1,6 +1,5 @@
 package be.digitalcity.introspring.controllers;
 
-import io.github.cdimascio.dotenv.Dotenv;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
