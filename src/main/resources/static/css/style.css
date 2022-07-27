@@ -39,3 +39,7 @@ h1{
     box-shadow: 3px 3px 8px black;
     width: 19rem !important;
 }
+
+.linkCenter{
+    text-align: center;
+}
