@@ -10,7 +10,7 @@ import java.time.Period;
 @Service
 public class Mapper {
     public PlayerDTO toPlayerDto(Player entity){
-        int age = Period.between(LocalDate.now() ,entity.getBirthDate()).getYears();
+        int age = Period.between(entity.getBirthDate(), LocalDate.now()).getYears();
         return PlayerDTO.builder()
                 .id(entity.getId())
                 .name(entity.getName())
