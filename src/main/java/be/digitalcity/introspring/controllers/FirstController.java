@@ -20,7 +20,6 @@ public class FirstController {
     public ModelAndView firstCall(){
         ModelAndView mv = new ModelAndView("first");
 
-        Dotenv dotenv = Dotenv.load();
         String msg = System.getenv("MESSAGE");
         mv.addObject("message", msg);
         mv.addObject("infos", infos);
