@@ -1,5 +1,6 @@
 package be.digitalcity.introspring.controllers;
 
+import io.github.cdimascio.dotenv.Dotenv;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -18,7 +19,9 @@ public class FirstController {
     @RequestMapping(path = "/first", method = RequestMethod.GET)
     public ModelAndView firstCall(){
         ModelAndView mv = new ModelAndView("first");
-        mv.addObject("message", "Spring");
+
+        Dotenv dotenv = Dotenv.load();
+        mv.addObject("message", dotenv.get("MESSAGE"));
         mv.addObject("infos", infos);
         return mv;
     }
