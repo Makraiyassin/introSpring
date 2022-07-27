@@ -21,7 +21,8 @@ public class FirstController {
         ModelAndView mv = new ModelAndView("first");
 
         Dotenv dotenv = Dotenv.load();
-        mv.addObject("message", dotenv.get("MESSAGE"));
+        String msg = System.getenv("MESSAGE");
+        mv.addObject("message", msg);
         mv.addObject("infos", infos);
         return mv;
     }
