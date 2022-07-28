@@ -5,27 +5,22 @@ spring:
 #    password: "4321"
 #    driver-class-name: org.postgresql.Driver
 
-  datasource:
-    url: jdbc:mysql://localhost:3306/introSpringDb
-    username: "root"
-    password: ""
-    driver-class-name: com.mysql.jdbc.Driver
-
 #  datasource:
-#    url: jdbc:h2:mem:demoBF2022
-#    username: sa
-#    password: "1234"
-#    driver-class-name: org.h2.Driver
+#    url: jdbc:mysql://localhost:3306/introSpringDb
+#    username: "root"
+#    password: ""
+#    driver-class-name: com.mysql.jdbc.Driver
 
-#  h2:
-#    console:
-#      enabled: true
+  datasource:
+    url: jdbc:h2:mem:demoBF2022
+    username: sa
+    password: "1234"
+    driver-class-name: org.h2.Driver
 
   jpa:
     hibernate:
       ddl-auto: create
     show-sql: true
-#    database-platform: org.hibernate.dialect.H2Dialect
 
 server:
   port: 8081
