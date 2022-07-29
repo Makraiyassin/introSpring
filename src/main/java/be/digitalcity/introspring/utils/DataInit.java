@@ -43,7 +43,7 @@ public class DataInit implements InitializingBean {
                     .number(1)
                     .build(),
             Player.builder()
-                    .name("Mbape")
+                    .name("Lukaku")
                     .birthDate(LocalDate.of(1990,1,21))
                     .poste(Poste.MILIEU_OFFENSIF)
                     .salary(100_000.00)
