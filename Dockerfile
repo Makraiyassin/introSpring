@@ -8,3 +8,4 @@ RUN ./mvnw dependency:go-offline
 COPY src ./src
 CMD ["./mvnw", "spring-boot:run"]
 EXPOSE 8081
+## docker build -t spring-app-docker .
