@@ -2,23 +2,23 @@ server:
   port: 8081
 
 spring:
-  datasource:
-    url: jdbc:postgresql://localhost:5432/
-    username: "postgres"
-    password: "1234"
-    driver-class-name: org.postgresql.Driver
+#  datasource:
+#    url: jdbc:postgresql://localhost:5432/introspringdb
+#    username: "postgres"
+#    password: "1234"
+#    driver-class-name: org.postgresql.Driver
 
 #  datasource:
-#    url: jdbc:mysql://localhost:3306/introSpringDb
+#    url: jdbc:mysql://localhost:3306/introspringdb
 #    username: "root"
 #    password: ""
 #    driver-class-name: com.mysql.jdbc.Driver
 
-#  datasource:
-#    url: jdbc:h2:mem:demoBF2022
-#    username: sa
-#    password: "1234"
-#    driver-class-name: org.h2.Driver
+  datasource:
+    url: jdbc:h2:mem:demoBF2022
+    username: sa
+    password: "1234"
+    driver-class-name: org.h2.Driver
 
   jpa:
     hibernate:
